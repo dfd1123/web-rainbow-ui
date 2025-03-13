@@ -1,0 +1,478 @@
+@use "./mixin" as *;
+
+/* Typography */
+@mixin text-56-bold {
+    font-weight: 700;
+    letter-spacing: -0.0319em;
+  
+    @include font-size(56);
+    @include line-height(72);
+  }
+  
+  @mixin text-56-semibold {
+    font-weight: 600;
+    letter-spacing: -0.0319em;
+  
+    @include font-size(56);
+    @include line-height(72);
+  }
+  
+  @mixin text-56-medium {
+    font-weight: 500;
+    letter-spacing: -0.0319em;
+  
+    @include font-size(56);
+    @include line-height(72);
+  }
+  
+  @mixin text-56-regular {
+    font-weight: 400;
+    letter-spacing: -0.0319em;
+  
+    @include font-size(56);
+    @include line-height(72);
+  }
+  
+  @mixin text-40-bold {
+    font-weight: 700;
+    letter-spacing: -0.0282em;
+  
+    @include font-size(40);
+    @include line-height(52);
+  }
+  
+  @mixin text-40-semibold {
+    font-weight: 600;
+    letter-spacing: -0.0282em;
+  
+    @include font-size(40);
+    @include line-height(52);
+  }
+  
+  @mixin text-40-medium {
+    font-weight: 500;
+    letter-spacing: -0.0282em;
+  
+    @include font-size(40);
+    @include line-height(52);
+  }
+  
+  @mixin text-40-regular {
+    font-weight: 400;
+    letter-spacing: -0.0282em;
+  
+    @include font-size(40);
+    @include line-height(52);
+  }
+  
+  @mixin text-36-bold {
+    font-weight: 700;
+    letter-spacing: -0.027em;
+  
+    @include font-size(36);
+    @include line-height(48);
+  }
+  
+  @mixin text-36-semibold {
+    font-weight: 600;
+    letter-spacing: -0.027em;
+  
+    @include font-size(36);
+    @include line-height(48);
+  }
+  
+  @mixin text-36-medium {
+    font-weight: 500;
+    letter-spacing: -0.027em;
+  
+    @include font-size(36);
+    @include line-height(48);
+  }
+  
+  @mixin text-36-regular {
+    font-weight: 400;
+    letter-spacing: -0.027em;
+  
+    @include font-size(36);
+    @include line-height(48);
+  }
+  
+  @mixin text-28-bold {
+    font-weight: 700;
+    letter-spacing: -0.0236em;
+  
+    @include font-size(28);
+    @include line-height(38);
+  }
+  
+  @mixin text-28-semibold {
+    font-weight: 600;
+    letter-spacing: -0.0236em;
+  
+    @include font-size(28);
+    @include line-height(38);
+  }
+  
+  @mixin text-28-medium {
+    font-weight: 500;
+    letter-spacing: -0.0236em;
+  
+    @include font-size(28);
+    @include line-height(38);
+  }
+  
+  @mixin text-28-regular {
+    font-weight: 400;
+    letter-spacing: -0.0236em;
+  
+    @include font-size(28);
+    @include line-height(38);
+  }
+  
+  @mixin text-24-bold {
+    font-weight: 700;
+    letter-spacing: -0.023em;
+  
+    @include font-size(24);
+    @include line-height(32);
+  }
+  
+  @mixin text-24-semibold {
+    font-weight: 600;
+    letter-spacing: -0.023em;
+  
+    @include font-size(24);
+    @include line-height(32);
+  }
+  
+  @mixin text-24-medium {
+    font-weight: 500;
+    letter-spacing: -0.023em;
+  
+    @include font-size(24);
+    @include line-height(32);
+  }
+  
+  @mixin text-24-regular {
+    font-weight: 400;
+    letter-spacing: -0.023em;
+  
+    @include font-size(24);
+    @include line-height(32);
+  }
+  
+  @mixin text-22-bold {
+    font-weight: 700;
+    letter-spacing: -0.0194em;
+  
+    @include font-size(22);
+    @include line-height(30);
+  }
+  
+  @mixin text-22-semibold {
+    font-weight: 600;
+    letter-spacing: -0.0194em;
+  
+    @include font-size(22);
+    @include line-height(30);
+  }
+  
+  @mixin text-22-medium {
+    font-weight: 500;
+    letter-spacing: -0.0194em;
+  
+    @include font-size(22);
+    @include line-height(30);
+  }
+  
+  @mixin text-22-regular {
+    font-weight: 400;
+    letter-spacing: -0.0194em;
+  
+    @include font-size(22);
+    @include line-height(30);
+  }
+  
+  @mixin text-20-bold {
+    font-weight: 700;
+    letter-spacing: -0.012em;
+  
+    @include font-size(20);
+    @include line-height(28);
+  }
+  
+  @mixin text-20-semibold {
+    font-weight: 600;
+    letter-spacing: -0.012em;
+  
+    @include font-size(20);
+    @include line-height(28);
+  }
+  
+  @mixin text-20-medium {
+    font-weight: 500;
+    letter-spacing: -0.012em;
+  
+    @include font-size(20);
+    @include line-height(28);
+  }
+  
+  @mixin text-20-regular {
+    font-weight: 400;
+    letter-spacing: -0.012em;
+  
+    @include font-size(20);
+    @include line-height(28);
+  }
+  
+  @mixin text-18-bold {
+    font-weight: 700;
+    letter-spacing: -0.002em;
+  
+    @include font-size(18);
+    @include line-height(26);
+  }
+  
+  @mixin text-18-semibold {
+    font-weight: 600;
+    letter-spacing: -0.002em;
+  
+    @include font-size(18);
+    @include line-height(26);
+  }
+  
+  @mixin text-18-medium {
+    font-weight: 500;
+    letter-spacing: -0.002em;
+  
+    @include font-size(18);
+    @include line-height(26);
+  }
+  
+  @mixin text-18-regular {
+    font-weight: 400;
+    letter-spacing: -0.002em;
+  
+    @include font-size(18);
+    @include line-height(26);
+  }
+  
+  @mixin text-17-bold {
+    font-weight: 700;
+    letter-spacing: 0;
+  
+    @include font-size(17);
+    @include line-height(24);
+  }
+  
+  @mixin text-17-semibold {
+    font-weight: 600;
+    letter-spacing: 0;
+  
+    @include font-size(17);
+    @include line-height(24);
+  }
+  
+  @mixin text-17-medium {
+    font-weight: 500;
+    letter-spacing: 0;
+  
+    @include font-size(17);
+    @include line-height(24);
+  }
+  
+  @mixin text-17-regular {
+    font-weight: 400;
+    letter-spacing: 0;
+  
+    @include font-size(17);
+    @include line-height(24);
+  }
+  
+  @mixin text-16-bold {
+    font-weight: 700;
+    letter-spacing: 0.0057em;
+  
+    @include font-size(16);
+    @include line-height(24);
+  }
+  
+  @mixin text-16-semibold {
+    font-weight: 600;
+    letter-spacing: 0.0057em;
+  
+    @include font-size(16);
+    @include line-height(24);
+  }
+  
+  @mixin text-16-medium {
+    font-weight: 500;
+    letter-spacing: 0.0057em;
+  
+    @include font-size(16);
+    @include line-height(24);
+  }
+  
+  @mixin text-16-regular {
+    font-weight: 400;
+    letter-spacing: 0.0057em;
+  
+    @include font-size(16);
+    @include line-height(24);
+  }
+  
+  @mixin text-15-bold {
+    font-weight: 700;
+    letter-spacing: 0.0096em;
+  
+    @include font-size(15);
+    @include line-height(22);
+  }
+  
+  @mixin text-15-semibold {
+    font-weight: 600;
+    letter-spacing: 0.0096em;
+  
+    @include font-size(15);
+    @include line-height(22);
+  }
+  
+  @mixin text-15-medium {
+    font-weight: 500;
+    letter-spacing: 0.0096em;
+  
+    @include font-size(15);
+    @include line-height(22);
+  }
+  
+  @mixin text-15-regular {
+    font-weight: 400;
+    letter-spacing: 0.0096em;
+  
+    @include font-size(15);
+    @include line-height(22);
+  }
+  
+  @mixin text-14-bold {
+    font-weight: 700;
+    letter-spacing: 0.0145em;
+  
+    @include font-size(14);
+    @include line-height(20);
+  }
+  
+  @mixin text-14-semibold {
+    font-weight: 600;
+    letter-spacing: 0.0145em;
+  
+    @include font-size(14);
+    @include line-height(20);
+  }
+  
+  @mixin text-14-medium {
+    font-weight: 500;
+    letter-spacing: 0.0145em;
+  
+    @include font-size(14);
+    @include line-height(20);
+  }
+  
+  @mixin text-14-regular {
+    font-weight: 400;
+    letter-spacing: 0.0145em;
+  
+    @include font-size(14);
+    @include line-height(20);
+  }
+  
+  @mixin text-13-bold {
+    font-weight: 700;
+    letter-spacing: 0.0194em;
+  
+    @include font-size(13);
+    @include line-height(18);
+  }
+  
+  @mixin text-13-semibold {
+    font-weight: 600;
+    letter-spacing: 0.0194em;
+  
+    @include font-size(13);
+    @include line-height(18);
+  }
+  
+  @mixin text-13-medium {
+    font-weight: 500;
+    letter-spacing: 0.0194em;
+  
+    @include font-size(13);
+    @include line-height(18);
+  }
+  
+  @mixin text-13-regular {
+    font-weight: 400;
+    letter-spacing: 0.0194em;
+  
+    @include font-size(13);
+    @include line-height(18);
+  }
+  
+  @mixin text-12-bold {
+    font-weight: 700;
+    letter-spacing: 0.0252em;
+  
+    @include font-size(12);
+    @include line-height(16) ;
+  }
+  
+  @mixin text-12-semibold {
+    font-weight: 600;
+    letter-spacing: 0.0252em;
+  
+    @include font-size(12);
+    @include line-height(16) ;
+  }
+  
+  @mixin text-12-medium {
+    font-weight: 500;
+    letter-spacing: 0.0252em;
+  
+    @include font-size(12);
+    @include line-height(16) ;
+  }
+  
+  @mixin text-12-regular {
+    font-weight: 400;
+    letter-spacing: 0.0252em;
+  
+    @include font-size(12);
+    @include line-height(16) ;
+  }
+  
+  @mixin text-11-bold {
+    font-weight: 700;
+  
+    @include font-size(11);
+    @include line-height(14);
+  }
+  
+  @mixin text-11-semibold {
+    font-weight: 600;
+  
+    @include font-size(11);
+    @include line-height(14);
+  }
+  
+  @mixin text-11-medium {
+    font-weight: 500;
+  
+    @include font-size(11);
+    @include line-height(14);
+  }
+  
+  @mixin text-11-regular {
+    font-weight: 400;
+  
+    @include font-size(11);
+    @include line-height(14);
+  }

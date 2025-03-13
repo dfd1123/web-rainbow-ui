@@ -1,0 +1,108 @@
+@use "@repo/rb-styles/scss/index" as *;
+
+.accordion {
+  border: 1px solid var(--accor-border-color, var(--rb-line-solid-neutral));
+
+  >input {
+    display: none;
+
+    &:checked {
+      ~ label {
+        .accor-hd {
+          > .ico-subject {
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      // ~ .accor-bd {
+      //   border-right: 1px solid var(--rb-line-solid-neutral);
+      //   border-bottom: 1px solid var(--rb-line-solid-neutral);
+      //   border-left: 1px solid var(--rb-line-solid-neutral);
+      // }
+    }
+
+    &:not(:checked) {
+      ~ label {
+        .accor-hd {
+          // style
+        }
+      }
+
+      ~ .accor-bd {
+        max-height: 0 !important;
+      }
+    }
+  }
+
+  .accor-hd {
+    display: flex;
+    min-height: 64px;
+    align-items: center;
+    justify-content: space-between;
+    padding: $sp-20;
+    background: var(--rb-background-normal-alternative);
+    cursor: pointer;
+
+    .subject {
+      display: flex;
+      width: 100%;
+      min-width: 0;
+      align-items: center;
+      color: var(--rb-label-normal);
+
+      @include text-15-semibold;
+
+      button[id*="tooltip-"] {
+        margin-left: $sp-6;
+      }
+    }
+
+    .ico-subject {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      margin-right: -$sp-16;
+
+      svg {
+        transform: rotate(0deg);
+        transition: transform 0.2s;
+      }
+    }
+
+    * { user-select: none; }
+
+    > .ico-subject {
+      svg {
+        transform: rotate(0deg);
+
+        rect {
+          fill: var(--rb-label-normal);
+        }
+
+        path {
+          stroke: var(--rb-label-normal);
+        }
+      }
+    }
+  }
+
+  .accor-bd {
+    overflow: hidden;
+    max-height: 100vh;
+    color: var(--rb-label-neutral);
+    transition: max-height 0.2s;
+    will-change: max-height;
+
+    @include text-14-regular;
+
+    .accor-bd-inner {
+      border-top: 1px solid var(--accor-border-color, var(--rb-line-solid-neutral));
+    }
+  }
+}

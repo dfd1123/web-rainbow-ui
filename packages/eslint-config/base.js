@@ -2,6 +2,8 @@ import js from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import turboPlugin from "eslint-plugin-turbo";
 import tseslint from "typescript-eslint";
+
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import onlyWarn from "eslint-plugin-only-warn";
 
 /**
@@ -13,12 +15,17 @@ export const config = [
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
+  eslintPluginPrettierRecommended,
   {
     plugins: {
       turbo: turboPlugin,
     },
     rules: {
       "turbo/no-undeclared-env-vars": "warn",
+      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+      "prettier/prettier": ["error", {
+        "semi": true
+      }],
     },
   },
   {

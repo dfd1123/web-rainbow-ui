@@ -1,0 +1,4 @@
+/* eslint-disable */
+/* prettier-ignore */
+export type StaticSvgIconName = 'ico-accordion' | 'ico-carousel-next' | 'ico-carousel-prev' | 'ico-check' | 'ico-close' | 'ico-ellipsis-chevron' | 'ico-indeterminate' | 'ico-input-reset' | 'ico-search-default' | 'ico-search' | 'ico-selectbox-arrow' | 'ico-sort-down-element' | 'ico-sort-normal-element' | 'ico-sort-up-element' | 'ico-tooltip-arrow' | 'keyboard-arrow-down-2' | 'keyboard-arrow-up-2';
+export type SvgComponentName = 'SvgIcoAccordion' | 'SvgIcoCarouselNext' | 'SvgIcoCarouselPrev' | 'SvgIcoCheck' | 'SvgIcoClose' | 'SvgIcoEllipsisChevron' | 'SvgIcoIndeterminate' | 'SvgIcoInputReset' | 'SvgIcoSearchDefault' | 'SvgIcoSearch' | 'SvgIcoSelectboxArrow' | 'SvgIcoSortDownElement' | 'SvgIcoSortNormalElement' | 'SvgIcoSortUpElement' | 'SvgIcoTooltipArrow' | 'SvgKeyboardArrowDown2' | 'SvgKeyboardArrowUp2'

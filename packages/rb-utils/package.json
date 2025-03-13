@@ -1,0 +1,32 @@
+{
+  "name": "@repo/rb-utils",
+  "version": "1.0.0",
+  "exports": {
+    "./cookieUtils": "./src/cookieUtils.ts",
+    "./etcUtils": "./src/etcUtils.ts",
+    "./browserUtils": "./src/browserUtils.ts",
+    "./parserUtils": "./src/parserUtils.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "generate:utils": "turbo gen rb-utils",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@turbo/gen": "^2.4.4",
+    "@types/js-cookie": "^3",
+    "@types/node": "^22.13.9",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "eslint": "^9.21.0",
+    "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "js-cookie": "^3.0.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

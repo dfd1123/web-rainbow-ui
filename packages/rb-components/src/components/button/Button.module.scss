@@ -1,0 +1,498 @@
+@use "@repo/rb-styles/scss/index" as *;
+
+.btn {
+  position: relative;
+  display: flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 28px;
+  border-radius: $rd-10;
+  background-color: var(--rb-label-normal);
+  color: var(--rb-label-inverse-normal);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color ease 0.25s;
+
+  @include word-break;
+  @include text-15-bold;
+
+  // hover, focus 인터랙션 될 때 버튼영역에 Dimmed 처리 되는 가상선택자
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $rd-100;
+    background-color: var(--rb-label-normal);
+    content: "";
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &.loading {
+    pointer-events: none;
+  }
+
+  [class*="spinner"] {
+    margin-left: 8px;
+  }
+
+  &.fullsize {
+    width: 100%;
+    flex: 1;
+  }
+
+  // 버튼 상태에 따른 스타일 정의
+  &:disabled {
+    background-color: var(--rb-interaction-disable);
+    color: var(--rb-label-assistive);
+    cursor: not-allowed;
+  }
+
+  // 버튼 상태에 따른 스타일 정의 :disabled 아닌 경우
+  &:not(:disabled) {
+    &:hover {
+      @include hover {
+        &::before {
+          opacity: 0.075;
+        }
+      }
+    }
+
+    &:focus {
+      &::before {
+        opacity: 0.12;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.18;
+      }
+    }
+  }
+
+  * {
+    pointer-events: none;
+  }
+
+  /* 버튼 사이즈별 스타일 정의 */
+  &.large {
+    height: 44px;
+    padding: 0 24px;
+  }
+
+  &.medium {
+    height: 40px;
+    padding: 0 20px;
+
+    @include text-15-bold;
+  }
+
+  &.small {
+    height: 32px;
+    padding: 0 14px;
+
+    @include text-12-bold;
+  }
+
+  &.tiny {
+    height: 24px;
+    padding: 0 $sp-12;
+
+    @include text-14-bold;
+  }
+
+  // 컬러 타입에 따른 색상 정의
+  &.secondary {
+    background-color: var(--rb-primary-normal);
+    color: var(--rb-static-white);
+  }
+}
+
+/**
+* IconButton Style
+*/
+.btn-icon {
+  width: var(--size);
+  height: var(--size);
+  padding: 0;
+  border-radius: $rd-circle;
+  background: transparent;
+
+  svg rect {
+    fill: black;
+  }
+
+  &::before {
+    border-radius: $rd-circle;
+  }
+
+  // uiType Plain
+
+  // uiType Solid
+  &.solid {
+    background: var(--rb-label-normal);
+
+    svg rect {
+      fill: white;
+    }
+  }
+
+  // uiType Outline
+}
+
+/**
+* LineCapButton Style
+*/
+.btn-line-cap {
+  border: 1px solid var(--rb-label-normal);
+  border-radius: $rd-100;
+
+  // background-color: var(--rb-background-normal-normal);
+  background-color: transparent;
+  color: var(--rb-label-normal);
+
+  // hover, focus 인터랙션 될 때 버튼영역에 Dimmed 처리 되는 가상선택자
+  &::before {
+    border-radius: $rd-100;
+    background-color: var(--rb-label-normal);
+  }
+
+  // 버튼 상태에 따른 스타일 정의
+  &:disabled {
+    border-color: var(--rb-line-normal-normal);
+    background-color: transparent;
+    color: var(--rb-label-assistive);
+    cursor: not-allowed;
+  }
+
+  // 버튼 상태에 따른 스타일 정의 :disabled 아닌 경우
+  &:not(:disabled) {
+    &:hover {
+      @include hover {
+        &::before {
+          opacity: 0.05;
+        }
+      }
+    }
+
+    &:focus {
+      &::before {
+        opacity: 0.08;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.12;
+      }
+    }
+  }
+}
+
+/**
+* LineSquareButton Style
+*/
+.btn-line-square {
+  border: 1px solid var(--rb-label-normal);
+  border-radius: $rd-10;
+  background-color: transparent;
+  color: var(--rb-label-normal);
+
+  // hover, focus 인터랙션 될 때 버튼영역에 Dimmed 처리 되는 가상선택자
+  &::before {
+    border-radius: $rd-100;
+  }
+
+  // 버튼 상태에 따른 스타일 정의
+  &:disabled {
+    border-color: var(--rb-line-normal-normal);
+    background-color: transparent;
+    color: var(--rb-label-assistive);
+    cursor: not-allowed;
+  }
+
+  // 버튼 상태에 따른 스타일 정의 :disabled 아닌 경우
+  &:not(:disabled) {
+    &:hover {
+      @include hover {
+        &::before {
+          opacity: 0.05;
+        }
+      }
+    }
+
+    &:focus {
+      &::before {
+        opacity: 0.08;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.12;
+      }
+    }
+  }
+}
+
+/**
+* SolidCapButton Stye
+*/
+.btn-solid-cap {
+  border-radius: $rd-100;
+  color: var(--rb-label-inverse-normal);
+
+  // hover, focus 인터랙션 될 때 버튼영역에 Dimmed 처리 되는 가상선택자
+  &::before {
+    border-radius: $rd-100;
+  }
+
+  // 버튼 상태에 따른 스타일 정의
+  &:disabled {
+    background-color: var(--rb-interaction-disable) !important;
+    color: var(--rb-label-assistive);
+    cursor: not-allowed;
+  }
+
+  // 버튼 상태에 따른 스타일 정의 :disabled 아닌 경우
+  &:not(:disabled) {
+    &:hover {
+      @include hover {
+        &::before {
+          opacity: 0.075;
+        }
+      }
+    }
+
+    &:focus {
+      &::before {
+        opacity: 0.12;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.18;
+      }
+    }
+  }
+}
+
+/**
+* SolidSquareButton Style
+*/
+.btn-solid-square {
+  border-radius: $rd-10;
+  background-color: var(--rb-label-normal);
+  color: var(--rb-background-normal-normal);
+
+  // hover, focus 인터랙션 될 때 버튼영역에 Dimmed 처리 되는 가상선택자
+  &::before {
+    border-radius: $rd-100;
+    background-color: var(--rb-background-normal-normal);
+  }
+
+  // 버튼 상태에 따른 스타일 정의
+  &:disabled {
+    background-color: var(--rb-interaction-disable) !important;
+    color: var(--rb-label-assistive);
+    cursor: not-allowed;
+  }
+
+  // 버튼 상태에 따른 스타일 정의 :disabled 아닌 경우
+  &:not(:disabled) {
+    &:hover {
+      @include hover {
+        &::before {
+          opacity: 0.075;
+        }
+      }
+    }
+
+    &:focus {
+      &::before {
+        opacity: 0.12;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.18;
+      }
+    }
+  }
+}
+
+/**
+* AssistiveSquareButton Style
+  이 버튼스타일은 테이블 내부에 있는 버튼으로만 사용되고있습니다.
+*/
+.btn-assitive-square {
+  height: 24px;
+  padding: 0 $sp-12;
+  border: 1px solid var(--rb-line-normal-normal);
+  border-radius: $rd-6;
+  background-color: transparent;
+  color: var(--rb-background-normal-normal);
+
+  @include text-12-bold;
+
+  // hover, focus 인터랙션 될 때 버튼영역에 Dimmed 처리 되는 가상선택자
+  &::before {
+    border-radius: $rd-6;
+    background-color: transparent;
+  }
+
+  // 버튼 상태에 따른 스타일 정의
+  &:disabled {
+    border-color: var(--rb-line-normal-normal);
+    background-color: transparent;
+    color: var(--rb-label-assistive);
+    cursor: not-allowed;
+  }
+
+  // 버튼 상태에 따른 스타일 정의 :disabled 아닌 경우
+  &:not(:disabled) {
+    &:hover {
+      @include hover {
+        &::before {
+          opacity: 0.075;
+        }
+      }
+    }
+
+    &:focus {
+      &::before {
+        opacity: 0.12;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.18;
+      }
+    }
+  }
+}
+
+/**
+* TextButton Style
+*/
+
+.btn-text {
+  position: relative;
+  display: inline-flex;
+  height: auto;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--rb-static-black);
+  font-feature-settings: "calt" off;
+  font-weight: 400;
+
+  @include font-size(14);
+  @include line-height(18);
+
+  svg path {
+    fill: var($color-neutral-50);
+  }
+
+  &::before {
+    position: absolute;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--rb-static-black) !important;
+    content: "";
+    transition: ease 0.25s;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      @include hover {
+        &::before { width: 100%; }
+      }
+    }
+  }
+}
+
+/**
+  * EventPromaryButton
+  프로모션페이지에서 사용되는 3.0버전의 버튼 스타일 (이벤트 종료후 삭제)
+*/
+.btn-event-primary {
+  overflow: hidden;
+  border-radius: $rd-100;
+  background: #f06;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+
+  // 버튼 상태에 따른 스타일 정의
+  &:disabled {
+    background: rgb(255 255 255 / 8%);
+    color: rgb(255 255 255 / 16%);
+    cursor: not-allowed;
+  }
+
+  // 버튼 상태에 따른 스타일 정의 :disabled 아닌 경우
+  &:not(:disabled) {
+    &:hover {
+      @include hover {
+        background: #cc0052;
+      }
+    }
+
+    &:focus {
+      background: #cc0052;
+    }
+  }
+}
+
+.btn-event-secondary {
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: $rd-100;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+
+  // 버튼 상태에 따른 스타일 정의
+  &:disabled {
+    border: 1px solid rgb(255 255 255 / 8%);
+    background: transparent;
+    color: rgb(255 255 255 / 16%);
+    cursor: not-allowed;
+  }
+
+  // 버튼 상태에 따른 스타일 정의 :disabled 아닌 경우
+  &:not(:disabled) {
+    &:hover {
+      @include hover {
+        border: 1px solid white;
+      }
+    }
+
+    &:focus {
+      border: 1px solid white;
+    }
+  }
+}

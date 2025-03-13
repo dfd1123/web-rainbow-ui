@@ -1,0 +1,60 @@
+@use "@repo/rb-styles/scss/index" as *;
+
+.option {
+  position: relative;
+  display: flex;
+  height: 48px;
+  min-height: 40px;
+  align-items: center;
+  padding: $sp-14 $sp-16;
+  color: var(--rb-label-strong);
+  cursor: pointer;
+  transition: background-color ease-in-out 0.25s;
+
+  @include text-14-regular;
+
+  // &:not(:first-child) {
+  //   border-top: 1px solid var(--rb-line-solid-normal);
+
+  //   @include breakpoint-768 {
+  //     border: none;
+  //   }
+  // }
+
+  @include breakpoint-768 {
+    &:not(:first-child) {
+      border-top: 1px solid var(--rb-line-solid-normal);
+    }
+  }
+
+  &.active {
+    background-color: var(--rb-fill-normal);
+
+    @include breakpoint-768 {
+      background-color: var(--rb-background-normal-normal);
+    }
+  }
+
+  &:hover {
+    background-color: var(--rb-fill-normal);
+
+    @include breakpoint-768 {
+      background-color: var(--rb-background-normal-normal);
+    }
+  }
+
+  &.match:not(:hover) {
+    background-color: var(--rb-fill-normal);
+
+    @include breakpoint-768 {
+      background-color: var(--rb-background-normal-normal);
+    }
+  }
+
+  &.hide { display: none; }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

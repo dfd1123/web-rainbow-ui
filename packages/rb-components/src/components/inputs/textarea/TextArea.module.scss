@@ -1,0 +1,66 @@
+@use "@repo/rb-styles/scss/index" as *;
+
+.text-area {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  &.error {
+    border-color: var(--rb-status-negative);
+    caret-color: red;
+
+    textarea {
+      border-color: var(--rb-status-negative);
+    }
+
+    &.filled {
+      border-color: var(--rb-status-negative) !important;
+    }
+  }
+
+  &.filled {
+    textarea {
+      border-color: var(--rb-label-alternative) !important;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    padding: $sp-12;
+    border: 0;
+    border: 1px solid var(--rb-line-normal-alternative);
+    border-radius: $rd-12;
+    background: var(--rb-background-normal-alternative);
+    color: var(--rb-label-strong);
+    resize: none;
+
+    @include text-14-regular;
+
+    &::placeholder {
+      color: var(--rb-label-assistive);
+    }
+
+    &:focus {
+      border-color: var(--rb-label-alternative);
+
+      &::placeholder {
+        font-size: 0;
+      }
+    }
+  }
+
+  .text-count {
+    @include text-13-regular;
+
+    padding: $sp-16 $sp-20;
+    color: var(--rb-label-assistive);
+    text-align: right;
+
+    > strong {
+      color: var(--rb-label-normal);
+
+      @include text-13-medium;
+    }
+  }
+}

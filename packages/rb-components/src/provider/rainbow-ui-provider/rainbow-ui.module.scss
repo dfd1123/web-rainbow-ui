@@ -1,0 +1,473 @@
+/* stylelint-disable custom-property-pattern */
+
+@use "@repo/rb-styles/scss/index" as *;
+
+:global(body) {
+    &:not([data-theme="dark"]) {
+      // static
+      --rb-static-white: #{$color-common-100};
+      --rb-static-black: #{$color-common-0};
+      --rb-static-gray05: #{$color-coolNeutral-99};
+      --rb-static-gray10: #{rgba( $color-coolNeutral-50, $color-opacity-6)};
+      --rb-static-gray80: #43444a;
+      --rb-static-gray85: #313337;
+      --rb-static-gray90: #252629;
+      --rb-static-gray95: #1f2023;
+  
+      // primary
+      --rb-primary-normal: #{$color-primary-50};
+      --rb-primary-strong: #{$color-primary-40};
+      --rb-primary-heavy: #{$color-primary-30};
+  
+      // highlight
+      --rb-highlight-normal: #{$color-blue-50};
+      --rb-highlight-strong: #{$color-blue-45};
+      --rb-highlight-heavy: #{$color-blue-40};
+  
+      // label
+      --rb-label-normal: #{$color-coolNeutral-10};
+      --rb-label-strong: #{$color-common-0};
+      --rb-label-neutral: #{rgba($color-coolNeutral-22, $color-opacity-88)};
+      --rb-label-alternative: #{rgba($color-coolNeutral-25, $color-opacity-61)};
+      --rb-label-assistive: #{rgba($color-coolNeutral-25, $color-opacity-28)};
+      --rb-label-disable: #{rgba($color-coolNeutral-25, $color-opacity-16)};
+      --rb-label-inverse-normal: #{$color-coolNeutral-99};
+      --rb-label-inverse-alternative: #{rgba($color-coolNeutral-80, $color-opacity-61)};
+  
+      // background
+      --rb-background-normal-normal: #{$color-common-100};
+      --rb-background-normal-alternative: #{$color-coolNeutral-99};
+      --rb-background-elevated-normal: #{$color-common-100};
+      --rb-background-elevated-alternative: #{$color-coolNeutral-99};
+      --rb-background-black: #{rgba($color-common-0, $color-opacity-61)};
+  
+      // interaction
+      --rb-interaction-inactive: #{$color-coolNeutral-70};
+      --rb-interaction-disable: #{$color-coolNeutral-98};
+  
+      // line
+      --rb-line-normal-normal: #{rgba($color-coolNeutral-50, $color-opacity-22)};
+      --rb-line-normal-neutral: #{rgba($color-coolNeutral-50, $color-opacity-16)};
+      --rb-line-normal-alternative: #{rgba($color-coolNeutral-50, $color-opacity-8)};
+      --rb-line-normal-strong: #{rgba($color-coolNeutral-50, $color-opacity-52)};
+      --rb-line-solid-normal: #{$color-coolNeutral-96};
+      --rb-line-solid-neutral: #{$color-coolNeutral-97};
+      --rb-line-solid-alternative: #{$color-coolNeutral-98};
+      --rb-line-solid-strong: #{$color-coolNeutral-80};
+  
+      // status
+      --rb-status-positive: #{$color-green-50};
+      --rb-status-positive-heavy: #{$color-green-40};
+      --rb-status-positive-bg: #{rgba($color-green-50, $color-opacity-10)};
+      --rb-status-cautionary: #{$color-orange-50};
+      --rb-status-cautionary-bg: #{rgba($color-orange-50, $color-opacity-10)};
+      --rb-status-negative: #{$color-red-50};
+      --rb-status-negative-bg: #{rgba($color-red-50, $color-opacity-16)};
+      --rb-status-negative-ball: #{rgba($color-red-50, $color-opacity-74)};
+      --rb-status-blue: #{$color-blue-50};
+      --rb-status-blue-bg: #{rgba($color-blue-50, $color-opacity-10)};
+  
+      // accent
+      --rb-accent-lime: #{$color-lime-50};
+      --rb-accent-cyan: #{$color-cyan-50};
+      --rb-accent-lightBlue: #{$color-lightBlue-50};
+      --rb-accent-violet: #{$color-violet-50};
+      --rb-accent-purple: #{$color-purple-50};
+      --rb-accent-pink: #{$color-pink-50};
+      --rb-accent-redOrange: #{$color-redOrange-50};
+  
+      // Component - fill
+      --rb-fill-normal: #{rgba($color-coolNeutral-50, $color-opacity-8)};
+      --rb-fill-strong: #{rgba($color-coolNeutral-50, $color-opacity-16)};
+      --rb-fill-alternative: #{rgba($color-coolNeutral-50, $color-opacity-5)};
+  
+      // Component - Material
+      --rb-material-dimmer: #{rgba($color-coolNeutral-10, $color-opacity-74)};
+      --rb-material-badge-violet-bg: #{rgba($color-violet-70, $color-opacity-20)};
+      --rb-material-badge-violet-50: #{$color-violet-50};
+      --rb-material-badge-violet-20: #{$color-violet-20};
+  
+      // Shadow
+      --rb-shadow-normal:
+        0 1px 2px rgb(0 0 0 / 12%),
+        0 0 1px rgb(0 0 0 / 8%),
+        0 0 1px rgb(0 0 0 / 8%);
+      --rb-shadow-emphasize:
+        0 2px 8px rgb(0 0 0 / 12%),
+        0 1px 4px rgb(0 0 0 / 8%),
+        0 0 1px rgb(0 0 0 / 8%);
+      --rb-shadow-strong:
+        0 6px 12px rgb(0 0 0 / 12%),
+        0 4px 8px rgb(0 0 0 / 8%),
+        0 0 4px rgb(0 0 0 / 8%);
+      --rb-shadow-heavy:
+        0 16px 20px rgb(0 0 0 / 12%),
+        0 8px 16px rgb(0 0 0 / 8%),
+        0 0 8px rgb(0 0 0 / 8%);
+      --rb-shadow-big: 0 20px 50px 0 rgb(0 0 0 / 10%);
+      --rb-shadow-cookie: 0 -5px 18px 0 rgb(0 0 0 / 8%);
+    }
+  
+    &[data-theme="dark"] {
+      // static
+      --rb-static-white: #{$color-common-100};
+      --rb-static-black: #{$color-common-0};
+      --rb-static-gray05: #{$color-coolNeutral-99};
+      --rb-static-gray10: #{rgba( $color-coolNeutral-50, $color-opacity-6)};
+      --rb-static-gray80: #43444a;
+      --rb-static-gray85: #313337;
+      --rb-static-gray90: #252629;
+      --rb-static-gray95: #1f2023;
+  
+      // primary
+      --rb-primary-normal: #{$color-primary-50};
+      --rb-primary-strong: #{$color-primary-40};
+      --rb-primary-heavy: #{$color-primary-30};
+  
+      // highlight
+      --rb-highlight-normal: #{$color-blue-60};
+      --rb-highlight-strong: #{$color-blue-55};
+      --rb-highlight-heavy: #{$color-blue-50};
+  
+      // label
+      --rb-label-normal: #{$color-coolNeutral-99};
+      --rb-label-strong: #{$color-common-100};
+      --rb-label-neutral: #{rgba($color-coolNeutral-90, $color-opacity-88)};
+      --rb-label-alternative: #{rgba($color-coolNeutral-80, $color-opacity-61)};
+      --rb-label-assistive: #{rgba($color-coolNeutral-80, $color-opacity-28)};
+      --rb-label-disable: #{rgba($color-coolNeutral-70, $color-opacity-16)};
+      --rb-label-inverse-normal: #{$color-coolNeutral-10};
+      --rb-label-inverse-alternative: #{rgba($color-coolNeutral-25, $color-opacity-61)};
+  
+      // background
+      --rb-background-normal-normal: #{$color-coolNeutral-15};
+      --rb-background-normal-alternative: #{$color-coolNeutral-5};
+      --rb-background-elevated-normal: #{$color-coolNeutral-17};
+      --rb-background-elevated-alternative: #{$color-coolNeutral-7};
+      --rb-background-black: #{rgba($color-common-0, $color-opacity-61)};
+  
+      // interaction
+      --rb-interaction-inactive: #{$color-coolNeutral-40};
+      --rb-interaction-disable: #{$color-coolNeutral-22};
+  
+      // line
+      --rb-line-normal-normal: #{rgba($color-coolNeutral-50, $color-opacity-32)};
+      --rb-line-normal-neutral: #{rgba($color-coolNeutral-50, $color-opacity-28)};
+      --rb-line-normal-alternative: #{rgba($color-coolNeutral-50, $color-opacity-22)};
+      --rb-line-normal-strong: #{rgba($color-coolNeutral-90, $color-opacity-52)};
+      --rb-line-solid-normal: #{$color-coolNeutral-25};
+      --rb-line-solid-neutral: #{$color-coolNeutral-23};
+      --rb-line-solid-alternative: #{$color-coolNeutral-22};
+      --rb-line-solid-strong: #{$color-coolNeutral-50};
+  
+      // status
+      --rb-status-positive: #{$color-green-60};
+      --rb-status-positive-heavy: #{$color-green-40};
+      --rb-status-positive-bg: #{rgba($color-green-60, $color-opacity-10)};
+      --rb-status-cautionary: #{$color-orange-60};
+      --rb-status-cautionary-bg: #{rgba($color-orange-60, $color-opacity-10)};
+      --rb-status-negative: #{$color-red-60};
+      --rb-status-negative-bg: #{rgba($color-red-60, $color-opacity-16)};
+      --rb-status-negative-ball: #{rgba($color-red-60, $color-opacity-74)};
+      --rb-status-blue: #{$color-blue-60};
+      --rb-status-blue-bg: #{rgba($color-blue-60, $color-opacity-10)};
+  
+      // accent
+      --rb-accent-lime: #{$color-lime-60};
+      --rb-accent-cyan: #{$color-cyan-60};
+      --rb-accent-lightBlue: #{$color-lightBlue-60};
+      --rb-accent-violet: #{$color-violet-60};
+      --rb-accent-purple: #{$color-purple-60};
+      --rb-accent-pink: #{$color-pink-60};
+      --rb-accent-redOrange: #{$color-redOrange-60};
+  
+      // Component - fill
+      --rb-fill-normal: #{rgba($color-coolNeutral-50, $color-opacity-22)};
+      --rb-fill-strong: #{rgba($color-coolNeutral-50, $color-opacity-28)};
+      --rb-fill-alternative: #{rgba($color-coolNeutral-50, $color-opacity-12)};
+  
+      // Component - Material
+      --rb-material-dimmer: #{rgba($color-coolNeutral-10, $color-opacity-74)};
+      --rb-material-badge-violet-bg: #{rgba($color-violet-70, $color-opacity-30)};
+      --rb-material-badge-violet-50: #{$color-violet-70};
+      --rb-material-badge-violet-20: #{$color-violet-90};
+  
+      // Shadow
+      --rb-shadow-normal:
+        0 1px 2px rgb(0 0 0 / 12%),
+        0 0 1px rgb(0 0 0 / 8%),
+        0 0 1px rgb(0 0 0 / 8%);
+      --rb-shadow-emphasize:
+        0 2px 8px rgb(0 0 0 / 12%),
+        0 1px 4px rgb(0 0 0 / 8%),
+        0 0 1px rgb(0 0 0 / 8%);
+      --rb-shadow-strong:
+        0 6px 12px rgb(0 0 0 / 12%),
+        0 4px 8px rgb(0 0 0 / 8%),
+        0 0 4px rgb(0 0 0 / 8%);
+      --rb-shadow-heavy:
+        0 16px 20px rgb(0 0 0 / 12%),
+        0 8px 16px rgb(0 0 0 / 8%),
+        0 0 8px rgb(0 0 0 / 8%);
+      --rb-shadow-big: 0 20px 50px 0 rgb(0 0 0 / 10%);
+      --rb-shadow-cookie: 0 -5px 18px 0 rgb(0 0 0 / 8%);
+    }
+  }
+  
+  :global(.rb-ui) {
+    main {
+      display: block;
+    }
+  
+    h1 {
+      margin: 0.67rem 0;
+      font-size: 2rem;
+    }
+  
+    hr {
+      overflow: visible;
+      height: 0;
+      box-sizing: content-box;
+    }
+  
+    pre {
+      font-size: 1rem;
+    }
+  
+    a {
+      background-color: transparent;
+    }
+  
+    abbr[title] {
+      border-bottom: none;
+      text-decoration: underline;
+      text-decoration: underline dotted;
+    }
+  
+    b,
+    strong {
+      font-weight: bolder;
+    }
+  
+    code,
+    kbd,
+    samp {
+      font-size: 1rem;
+    }
+  
+    small {
+      font-size: 80%;
+    }
+  
+    sub,
+    sup {
+      position: relative;
+      font-size: 75%;
+      line-height: 0;
+      vertical-align: baseline;
+    }
+  
+    sub {
+      bottom: -0.25rem;
+    }
+  
+    sup {
+      top: -0.5rem;
+    }
+  
+    img {
+      border-style: none;
+    }
+    p { margin: 0; }
+  
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      margin: 0;
+      font-family: inherit;
+      font-size: 1rem;
+      line-height: 1.15;
+    }
+  
+    button,
+    input {
+      overflow: visible;
+    }
+  
+    button,
+    select {
+      text-transform: none;
+    }
+  
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      appearance: button;
+    }
+  
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      padding: 0;
+      border-style: none;
+    }
+  
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+  
+    fieldset {
+      padding: 0.35rem 0.75rem 0.625rem;
+    }
+  
+    legend {
+      display: table;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 0;
+      color: inherit;
+      white-space: normal;
+    }
+  
+    progress {
+      vertical-align: baseline;
+    }
+  
+    textarea {
+      overflow: auto;
+    }
+  
+    [type="checkbox"],
+    [type="radio"] {
+      box-sizing: border-box;
+      padding: 0;
+    }
+  
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+      height: auto;
+    }
+  
+    [type="search"] {
+      appearance: textfield;
+      outline-offset: -2px;
+    }
+  
+    [type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+  
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      font: inherit;
+    }
+  
+    [hidden] {
+      display: none;
+    }
+  
+    /* HTML5 hidden-attribute fix for newer browsers */
+    * {
+      &[hidden] {
+        display: none;
+      }
+  
+      /* Focus outline 안보이게 처리 */
+      &:focus {
+        outline: none;
+      }
+    }
+  
+    ::selection {
+      background: #000;
+      color: #666;
+    }
+  
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+  
+    /* screen out */
+    .blind {
+      position: absolute;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      border: 0;
+      margin: -1px;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+    }
+  
+    svg:not(:root) {
+      overflow: unset;
+    }
+  
+    svg,
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  
+    button {
+      padding: 0;
+      border: none;
+      margin: 0;
+  
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  
+    input {
+      padding: 0;
+      border: none;
+      margin: 0;
+      background-color: transparent;
+  
+      &::placeholder {
+        color: var(--gray02);
+      }
+  
+      &:focus {
+        outline: none;
+      }
+    }
+  
+    /*  input 화살표 숨기기
+          크롬, 사파리, 엣지, 오페라
+      */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  
+    /* 파이어폭스 */
+    input[type="number"] {
+      -moz-appearance: textfield;
+      appearance: textfield;
+    }
+  
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 1000px #111 inset;
+      -webkit-text-fill-color: var(--gray00);
+    }
+  
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+  }
+  
+  
+  

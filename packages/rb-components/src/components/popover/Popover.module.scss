@@ -1,0 +1,34 @@
+@use "@repo/rb-styles/scss/index" as *;
+
+.popover {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--rb-line-solid-normal);
+  border-radius: $rd-10;
+  background: var(--rb-background-normal-alternative);
+  box-shadow: 0 20px 50px 0 rgb(0 0 0 / 10%);
+
+  /* Close Button */
+  .btn-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  /* Popover Header */
+  .popover-header {
+    margin-bottom: 20px;
+
+    &-title {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+  }
+}

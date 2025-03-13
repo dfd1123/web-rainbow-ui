@@ -1,0 +1,42 @@
+@use "@repo/rb-styles/scss/index" as *;
+
+.chip-tab {
+  :global {
+    .tab-nav-wrap {
+      background: transparent;
+    }
+
+    .tab-nav-scroll {
+      border-bottom: none;
+    }
+
+    .tab-nav {
+      column-gap: 8px;
+
+      .tab-btn {
+        display: flex;
+        width: auto;
+        height: auto;
+        min-height: 32px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 $sp-12;
+        border: 1px solid var(--rb-label-disable);
+        border-radius: 40px;
+        color: var(--rb-label-alternative);
+        cursor: pointer;
+        transition: color 0.25s, background-color 0.25s, border-color 0.25s;
+
+        @include text-14-regular;
+
+        &.active {
+          border-color: $color-coolNeutral-20;
+          background-color: $color-coolNeutral-20;
+          color: var(--rb-static-white);
+
+          @include text-13-semibold;
+        }
+      }
+    }
+  }
+}

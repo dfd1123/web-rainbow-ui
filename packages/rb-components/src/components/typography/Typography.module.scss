@@ -1,0 +1,250 @@
+@use "@repo/rb-styles/scss/index" as *;
+
+.typography {
+  /** Display */
+  &.text-56-bold {
+    @include text-56-bold;
+  }
+
+  &.text-56-semibold {
+    @include text-56-semibold;
+  }
+
+  &.text-56-medium {
+    @include text-56-medium;
+  }
+
+  &.text-56-regular {
+    @include text-56-regular;
+  }
+
+  &.text-40-bold {
+    @include text-40-bold;
+  }
+
+  &.text-40-semibold {
+    @include text-40-semibold;
+  }
+
+  &.text-40-medium {
+    @include text-40-medium;
+  }
+
+  &.text-40-regular {
+    @include text-40-regular;
+  }
+
+  /** Title */
+  &.text-36-bold {
+    @include text-36-bold;
+  }
+
+  &.text-36-semibold {
+    @include text-36-semibold;
+  }
+
+  &.text-36-medium {
+    @include text-36-medium;
+  }
+
+  &.text-36-regular {
+    @include text-36-regular;
+  }
+
+  &.text-28-bold {
+    @include text-28-bold;
+  }
+
+  &.text-28-semibold {
+    @include text-28-semibold;
+  }
+
+  &.text-28-medium {
+    @include text-28-medium;
+  }
+
+  &.text-28-regular {
+    @include text-28-regular;
+  }
+
+  &.text-24-bold {
+    @include text-24-bold;
+  }
+
+  &.text-24-semibold {
+    @include text-24-semibold;
+  }
+
+  &.text-24-medium {
+    @include text-24-medium;
+  }
+
+  &.text-24-regular {
+    @include text-24-regular;
+  }
+
+  /** Heading */
+  &.text-22-bold {
+    @include text-22-bold;
+  }
+
+  &.text-22-semibold {
+    @include text-22-semibold;
+  }
+
+  &.text-22-medium {
+    @include text-22-medium;
+  }
+
+  &.text-22-regular {
+    @include text-22-regular;
+  }
+
+  &.text-20-bold {
+    @include text-20-bold;
+  }
+
+  &.text-20-semibold {
+    @include text-20-semibold;
+  }
+
+  &.text-20-medium {
+    @include text-20-medium;
+  }
+
+  &.text-20-regular {
+    @include text-20-regular;
+  }
+
+  /** Headline */
+  &.text-18-bold {
+    @include text-18-bold;
+  }
+
+  &.text-18-semibold {
+    @include text-18-semibold;
+  }
+
+  &.text-18-medium {
+    @include text-18-medium;
+  }
+
+  &.text-18-regular {
+    @include text-18-regular;
+  }
+
+  &.text-17-bold {
+    @include text-17-bold;
+  }
+
+  &.text-17-semibold {
+    @include text-17-semibold;
+  }
+
+  &.text-17-medium {
+    @include text-17-medium;
+  }
+
+  &.text-17-regular {
+    @include text-17-regular;
+  }
+
+  /** Body */
+  &.text-16-bold {
+    @include text-16-bold;
+  }
+
+  &.text-16-semibold {
+    @include text-16-semibold;
+  }
+
+  &.text-16-medium {
+    @include text-16-medium;
+  }
+
+  &.text-16-regular {
+    @include text-16-regular;
+  }
+
+  &.text-15-bold {
+    @include text-15-bold;
+  }
+
+  &.text-15-semibold {
+    @include text-15-semibold;
+  }
+
+  &.text-15-medium {
+    @include text-15-medium;
+  }
+
+  &.text-15-regular {
+    @include text-15-regular;
+  }
+
+  /** Label */
+  &.text-14-bold {
+    @include text-14-bold;
+  }
+
+  &.text-14-semibold {
+    @include text-14-semibold;
+  }
+
+  &.text-14-medium {
+    @include text-14-medium;
+  }
+
+  &.text-14-regular {
+    @include text-14-regular;
+  }
+
+  &.text-13-bold {
+    @include text-13-bold;
+  }
+
+  &.text-13-semibold {
+    @include text-13-semibold;
+  }
+
+  &.text-13-medium {
+    @include text-13-medium;
+  }
+
+  &.text-13-regular {
+    @include text-13-regular;
+  }
+
+  /** Caption */
+  &.text-12-bold {
+    @include text-12-bold;
+  }
+
+  &.text-12-semibold {
+    @include text-12-semibold;
+  }
+
+  &.text-12-medium {
+    @include text-12-medium;
+  }
+
+  &.text-12-regular {
+    @include text-12-regular;
+  }
+
+  &.text-11-bold {
+    @include text-11-bold;
+  }
+
+  &.text-11-semibold {
+    @include text-11-semibold;
+  }
+
+  &.text-11-medium {
+    @include text-11-medium;
+  }
+
+  &.text-11-regular {
+    @include text-11-regular;
+  }
+}

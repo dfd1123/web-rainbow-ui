@@ -1,0 +1,85 @@
+@use "@repo/rb-styles/scss/index" as *;
+
+.carousel-wrapper {
+  &:hover {
+    .carousel-navigation {
+      opacity: 1;
+    }
+  }
+
+  .carousel-swiper {
+    :global {
+      .swiper-slide {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .carousel-navigation {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 50px);
+    left: 0;
+    display: none;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 0.3s;
+
+    @include breakpoint-1024 {
+      display: block;
+    }
+
+    button {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      display: flex;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      border-radius: $rd-100;
+      background: var(--rb-static-white);
+      cursor: pointer;
+      opacity: 0.8;
+
+      svg {
+        width: 18px;
+        height: 18px;
+
+        path {
+          fill: var(--rb-static-black);
+        }
+      }
+
+      &.nav-prev-btn {
+        left: -10px;
+      }
+
+      &.nav-next-btn {
+        right: -10px;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0;
+      }
+
+      &:not(:disabled):hover {
+        opacity: 1;
+      }
+
+      &:focus,
+      &:focus-within {
+        background: var(--rb-static-gray05);
+      }
+    }
+  }
+
+  .carousel-pagination {
+    > span {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@repo/rb-styles",
+  "version": "1.0.0",
+  "exports": {
+    "./scss/index": "./scss/index.scss"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*"
+  }
+}

@@ -1,0 +1,31 @@
+@use "@repo/rb-styles/scss/index" as *;
+
+.ripple {
+  position: relative;
+  display: contents;
+  overflow: hidden;
+
+  .animate {
+    opacity: 0.3;
+  }
+
+  /* stylelint-disable-next-line selector-type-no-unknown */
+  jwripple {
+    animation-name: material-ripple;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes material-ripple {
+    0% {
+      border-radius: 50%;
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+      border-radius: 45%;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+}

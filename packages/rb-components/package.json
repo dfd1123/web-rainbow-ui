@@ -1,0 +1,51 @@
+{
+    "name": "@repo/rb-components",
+    "version": "1.0.0",
+    "engines": {
+        "node": ">=20"
+    },
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": "./src/components/index.ts",
+        "./icons": "./src/components/icons/index.tsx",
+        "./provider": "./src/provider/index.ts"
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "dev": "NODE_ENV=development node scripts/svgComponentGenerator.js",
+        "generate:component": "turbo gen react-component",
+        "check-types": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "*",
+        "@repo/typescript-config": "*",
+        "@svgr/rollup": "^8.1.0",
+        "@turbo/gen": "^2.4.4",
+        "@types/fs-extra": "^11.0.4",
+        "@types/lodash": "^4.17.16",
+        "@types/node": "^22.13.9",
+        "@types/react": "19.0.10",
+        "@types/react-dom": "19.0.4",
+        "auto-svg-component-generator": "^1.0.4",
+        "eslint": "^9.21.0",
+        "sass": "^1.77.6"
+    },
+    "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18"
+    },
+    "dependencies": {
+        "@repo/rb-hooks": "*",
+        "@repo/rb-styles": "*",
+        "@repo/rb-utils": "*",
+        "chokidar": "2.1.8",
+        "classnames": "^2.5.1",
+        "decimal.js": "^10.5.0",
+        "lodash": "^4.17.21",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "swiper": "^11.1.1"
+    }
+}
