@@ -1,0 +1,12 @@
+{
+  "extends": "@repo/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "paths": {
+      "@sb/*": ["../../packages/rb-components/src/components/*"]
+    }
+  },
+  "include": ["stories", "stories/**/*.tsx", "stories/**/*.ts", "global.d.ts"]
+}
