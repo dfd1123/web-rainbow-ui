@@ -2422,6 +2422,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-links@npm:^8.6.4":
+  version: 8.6.4
+  resolution: "@storybook/addon-links@npm:8.6.4"
+  dependencies:
+    "@storybook/global": "npm:^5.0.0"
+    ts-dedent: "npm:^2.0.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+    storybook: ^8.6.4
+  peerDependenciesMeta:
+    react:
+      optional: true
+  checksum: 10c0/e64293d7aa68111e67103c287de862ab70a2b8d432f012156bf6383650479b1c95763420f90e1c5a3e156d01e318def674293fcf486af1fe2ccf68dc24a189b4
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-measure@npm:8.6.4":
   version: 8.6.4
   resolution: "@storybook/addon-measure@npm:8.6.4"
@@ -7863,6 +7879,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nested-object-assign@npm:^1.0.3":
+  version: 1.0.4
+  resolution: "nested-object-assign@npm:1.0.4"
+  checksum: 10c0/8cc837c51182b61df68d3da1773ad771d19244672336d2a5b370fa9680e8830955db4710f88c4f905e2020dae77340a363bc8d0821d645d46687d245b58c0485
+  languageName: node
+  linkType: hard
+
 "netmask@npm:^2.0.2":
   version: 2.0.2
   resolution: "netmask@npm:2.0.2"
@@ -8548,7 +8571,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.1, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.1, prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8612,43 +8635,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rb-storybook@workspace:apps/storybook":
-  version: 0.0.0-use.local
-  resolution: "rb-storybook@workspace:apps/storybook"
-  dependencies:
-    "@chromatic-com/storybook": "npm:^3.2.5"
-    "@eslint/js": "npm:^9.21.0"
-    "@repo/rb-components": "npm:*"
-    "@repo/rb-utils": "npm:*"
-    "@repo/typescript-config": "npm:*"
-    "@storybook/addon-essentials": "npm:^8.6.4"
-    "@storybook/addon-onboarding": "npm:^8.6.4"
-    "@storybook/blocks": "npm:^8.6.4"
-    "@storybook/experimental-addon-test": "npm:^8.6.4"
-    "@storybook/react": "npm:^8.6.4"
-    "@storybook/react-vite": "npm:^8.6.4"
-    "@storybook/test": "npm:^8.6.4"
-    "@types/react": "npm:^19.0.10"
-    "@types/react-dom": "npm:^19.0.4"
-    "@vitejs/plugin-react": "npm:^4.3.4"
-    "@vitest/browser": "npm:^3.0.8"
-    "@vitest/coverage-v8": "npm:^3.0.8"
-    eslint: "npm:^9.21.0"
-    eslint-plugin-react-hooks: "npm:^5.1.0"
-    eslint-plugin-react-refresh: "npm:^0.4.19"
-    eslint-plugin-storybook: "npm:^0.11.4"
-    globals: "npm:^15.15.0"
-    playwright: "npm:^1.51.0"
-    react: "npm:^19.0.0"
-    react-dom: "npm:^19.0.0"
-    storybook: "npm:^8.6.4"
-    typescript: "npm:~5.7.2"
-    typescript-eslint: "npm:^8.24.1"
-    vite: "npm:^6.2.0"
-    vitest: "npm:^3.0.8"
-  languageName: unknown
-  linkType: soft
-
 "rc@npm:^1.0.1, rc@npm:^1.1.6":
   version: 1.2.8
   resolution: "rc@npm:1.2.8"
@@ -8695,7 +8681,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-docgen@npm:^7.0.0":
+"react-docgen@npm:^7.0.0, react-docgen@npm:^7.1.1":
   version: 7.1.1
   resolution: "react-docgen@npm:7.1.1"
   dependencies:
@@ -8747,6 +8733,13 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 10c0/2bdb6b93fbb1820b024b496042cce405c57e2f85e777c9aabd55f9b26d145408f9f74f5934676ffdc46f3dcff656d78413a6e43968e7b3f92eea35b3052e9053
+  languageName: node
+  linkType: hard
+
+"react-lifecycles-compat@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "react-lifecycles-compat@npm:3.0.4"
+  checksum: 10c0/1d0df3c85af79df720524780f00c064d53a9dd1899d785eddb7264b378026979acbddb58a4b7e06e7d0d12aa1494fd5754562ee55d32907b15601068dae82c27
   languageName: node
   linkType: hard
 
@@ -9734,6 +9727,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"storybook-addon-react-docgen@npm:^1.2.44":
+  version: 1.2.44
+  resolution: "storybook-addon-react-docgen@npm:1.2.44"
+  dependencies:
+    nested-object-assign: "npm:^1.0.3"
+    prop-types: "npm:^15.6.2"
+    react-lifecycles-compat: "npm:^3.0.4"
+    storybook-pretty-props: "npm:^1.2.1"
+  peerDependencies:
+    "@storybook/addons": "*"
+    "@storybook/components": "*"
+    "@storybook/core-events": "*"
+    react: "*"
+  checksum: 10c0/270863e745ece6c1326097f2be26352cbb180a1a54b84ab816c9d3a4d7f3e4e2d1f439e0e7bc085334281ce487d63f019670ebf81efc0d6f00f51d47b0756442
+  languageName: node
+  linkType: hard
+
+"storybook-pretty-props@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "storybook-pretty-props@npm:1.2.1"
+  peerDependencies:
+    react: "*"
+  checksum: 10c0/dc9b6ec562ea3b8159147391b4d5eab703c9ea7858abaa9f77967e6ee444b4fd48554769a5a9f9e1f7b02aeebed18cb84aca834674b45330520943bb22a38f83
+  languageName: node
+  linkType: hard
+
 "storybook@npm:^8.6.4":
   version: 8.6.4
   resolution: "storybook@npm:8.6.4"
@@ -9751,6 +9770,51 @@ __metadata:
   checksum: 10c0/8a0f01274fa079b6e3563df19568933a13ca3b45981d8d5fa66376d12da4f926cca0e9c79a071930527610fbd0cb71a5346ff487bf331ff7a029058a26c3932f
   languageName: node
   linkType: hard
+
+"storybook@workspace:apps/storybook":
+  version: 0.0.0-use.local
+  resolution: "storybook@workspace:apps/storybook"
+  dependencies:
+    "@chromatic-com/storybook": "npm:^3.2.5"
+    "@eslint/js": "npm:^9.21.0"
+    "@repo/eslint-config": "npm:*"
+    "@repo/rb-components": "npm:*"
+    "@repo/rb-hooks": "npm:*"
+    "@repo/rb-styles": "npm:*"
+    "@repo/rb-utils": "npm:*"
+    "@repo/typescript-config": "npm:*"
+    "@storybook/addon-essentials": "npm:^8.6.4"
+    "@storybook/addon-links": "npm:^8.6.4"
+    "@storybook/addon-onboarding": "npm:^8.6.4"
+    "@storybook/blocks": "npm:^8.6.4"
+    "@storybook/experimental-addon-test": "npm:^8.6.4"
+    "@storybook/react": "npm:^8.6.4"
+    "@storybook/react-vite": "npm:^8.6.4"
+    "@storybook/test": "npm:^8.6.4"
+    "@types/react": "npm:^19.0.10"
+    "@types/react-dom": "npm:^19.0.4"
+    "@vitejs/plugin-react": "npm:^4.3.4"
+    "@vitest/browser": "npm:^3.0.8"
+    "@vitest/coverage-v8": "npm:^3.0.8"
+    eslint: "npm:^9.21.0"
+    eslint-plugin-react-hooks: "npm:^5.1.0"
+    eslint-plugin-react-refresh: "npm:^0.4.19"
+    eslint-plugin-storybook: "npm:^0.11.4"
+    globals: "npm:^15.15.0"
+    playwright: "npm:^1.51.0"
+    react: "npm:^19.0.0"
+    react-docgen: "npm:^7.1.1"
+    react-docgen-typescript: "npm:^2.2.2"
+    react-dom: "npm:^19.0.0"
+    storybook: "npm:^8.6.4"
+    storybook-addon-react-docgen: "npm:^1.2.44"
+    typescript: "npm:~5.7.2"
+    typescript-eslint: "npm:^8.24.1"
+    vite: "npm:^6.2.0"
+    vite-tsconfig-paths: "npm:^5.1.4"
+    vitest: "npm:^3.0.8"
+  languageName: unknown
+  linkType: soft
 
 "strict-event-emitter@npm:^0.5.1":
   version: 0.5.1
