@@ -10,10 +10,15 @@ import { TypographyColorType, TypographyType } from "./constant";
 
 interface TypographyProps extends HTMLAttributes<HTMLElement> {
   className?: string;
+  /** 태그 타입 */
   tag?: "h" | "p" | "span" | "font" | "label";
+  /** h 태그의 레벨 */
   hLevel?: 1 | 2 | 3 | 4 | 5 | 6;
+  /** 텍스트 스타일 */
   type?: TypographyType;
+  /** 텍스트 색상 */
   color?: TypographyColorType;
+  /** 컴포넌트 자식 노드 */
   children: ReactNode;
 }
 
@@ -23,18 +28,10 @@ type TypographySpanProps = Omit<TypographyProps, "tag" | "hLevel">;
 type TypographyFontProps = Omit<TypographyProps, "tag" | "hLevel">;
 type TypographyLabelProps = Omit<TypographyProps, "tag" | "hLevel">;
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `Typography` 컴포넌트는 텍스트 스타일을 적용하기 위한 컴포넌트입니다.
- *
- * @param {string} [props.className] - 컴포넌트 클래스명
- * @param {string} [props.tag='span'] - 컴포넌트 태그
- * @param {number} [props.hLevel=1] - h 태그의 레벨
- * @param {TypographyType} [props.type] - 텍스트 스타일
- * @param {TypographyColorType} [props.color] - 텍스트 색상
- * @param {ReactNode} [props.children] - 컴포넌트 자식 노드
- * @returns 텍스트 스타일 컴포넌트
  */
 const Typography = ({
   className,

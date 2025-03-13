@@ -10,7 +10,7 @@ type Props = {
   size?: number;
 };
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `Spinner` 컴포넌트는 로딩 상태를 나타내는 indicator UI를 제공하는 컴포넌트 입니다.

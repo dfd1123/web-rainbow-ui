@@ -90,7 +90,7 @@ interface PropsType {
   onClick?: (e: MouseEvent<HTMLTableCellElement>) => void;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `TdColumn` 컴포넌트는 테이블의 열을 구성하는데 사용되며, 다양한 설정을 통해 커스터마이징이 가능합니다.

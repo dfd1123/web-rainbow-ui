@@ -45,26 +45,10 @@ interface PropsType extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * Button 컴포넌트는 다양한 버튼 관련 기능을 제공합니다. <br/>
- *
- * @component
- * @param {string} [props.className=''] - 추가할 CSS 클래스 이름
- * @param {'button' | 'submit'} [props.type='button'] - button 태그의 type 속성값
- * @param {ReactNode | string} props.children - button 요소 안에 랜더링될 내용
- * @param {string} props.size - button 사이즈
- * @param {string} props.color - button 색상
- * @param {Object} [props.ripple] - Ripple 효과 옵션
- * @param {string} [props.ripple.color] - Ripple 효과의 색상
- * @param {number} [props.ripple.duration] - Ripple 효과의 지속 시간
- * @param {number} [props.ripple.maxSize] - Ripple 효과의 최대 크기
- * @param {boolean} [props.ripple.disabled] - Ripple 효과 비활성화 여부
- * @param {boolean} [props.disabled] - 버튼 비활성화 여부
- * @param {boolean} [props.detectDoubleClick] - 더블 클릭 방지 여부
- * @param {boolean} [props.loading=false] - button을 loading 처리할지 여부. `true`면 `Spinner` 컴포넌트 노출
- * @param {Function} [props.onClick] - button 태그를 클릭했을 때 호출되는 함수. MouseEvent<HTMLButtonElement>를 인자로 받음
  */
 const Button = ({
   className = "",

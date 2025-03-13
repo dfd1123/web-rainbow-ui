@@ -56,28 +56,10 @@ interface PropsType<LIST extends UnknownArrayType> {
   }) => ReactNode;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `ListMap` 컴포넌트는 리스트 데이터를 랜더링하거나 로딩 상태를 표시
- *
- * @component
- * @param {LIST|null} props.list - 랜더링할 리스트 데이터입니다. `null`일 경우 로딩 중임을 의미
- * @param {string|ReactElement} [props.noDataMsg] - 데이터가 없을 때 표시될 메시지 또는 컴포넌트
- * @param {string|ReactElement} [props.errorFallback] - 에러 발생시 랜더링할 요소 (ReactNode | ReactElement | string)
- * @param {string|ReactElement} [props.loadingElement] - 로딩 중일 때 표시될 요소
- * @param {ReactElement} [props.skeletonElement] - 로딩 중일 때 표시될 스켈레톤 컴포넌트
- * @param {number} [props.skeletonCnt] - 표시될 스켈레톤 컴포넌트의 개수
- * @param {boolean} [props.loading] - 로딩 상태를 강제로 설정할 때 사용. `true`로 설정 시, 로딩 상태로 간주
- * @param {function} props.children - 리스트 항목을 랜더링하는 함수. 각 항목과 인덱스를 매개변수로 받음.
- *
- * @example
- *
- * <ListMap list={[1, 2, 3]}>
- *    {({item, index}) => (
- *      <div key={index}>{item}</div>
- *    )}
- * </ListMap>
  */
 const ListMap = <LIST extends UnknownArrayType>({
   list,

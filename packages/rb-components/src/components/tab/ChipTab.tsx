@@ -9,10 +9,10 @@ import Tab, { TabProps } from "./Tab";
 import style from "./ChipTab.module.scss";
 
 type Props = TabProps & {
-  // type
+  slider?: never;
 };
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 const ChipTab = ({ className = "", ...tabProps }: Props) => {
   //logic

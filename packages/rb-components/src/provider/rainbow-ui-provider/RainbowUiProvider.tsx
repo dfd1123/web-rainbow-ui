@@ -48,7 +48,7 @@ const RainbowUiProvider = ({ children, theme }: RainbowUiProviderProps) => {
 
   return (
     <RainbowUiContext.Provider value={value}>
-      <div id="wemixplay-ui" className={cx("wemixplay-ui")}>
+      <div id="rainbow-ui" className={cx("rainbow-ui")}>
         {children}
       </div>
     </RainbowUiContext.Provider>

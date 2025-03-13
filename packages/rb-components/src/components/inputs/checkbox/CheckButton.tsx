@@ -18,7 +18,7 @@ type Props = CheckBoxProps & {
   rippleOption?: RippleOption;
 };
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 const CheckButton = forwardRef<HTMLInputElement, Props>(
   (

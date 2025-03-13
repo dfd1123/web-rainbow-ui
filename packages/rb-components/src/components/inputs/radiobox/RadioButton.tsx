@@ -18,7 +18,7 @@ type Props = RadioBoxProps & {
   rippleOption?: RippleOption;
 };
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 const RadioButton = forwardRef<HTMLInputElement, Props>(
   (

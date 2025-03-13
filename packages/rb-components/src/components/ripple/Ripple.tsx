@@ -46,22 +46,10 @@ interface PropsType extends RippleOption {
   children: ReactNode;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `Ripple` 컴포넌트는 사용자 인터랙션에 따른 시각적 피드백을 제공하기 위해 ripple 효과를 구현합니다.
- *
- * @component
- * @param {string} [props.color='#ddd'] - ripple 효과의 색상입니다. 지정하지 않을 경우 기본값은 `#ddd`. 색상값에는 opacity가 0.3이 자동으로 적용.
- * @param {number} [props.duration=500] - ripple 효과가 지속되는 시간(ms). 지정하지 않을 경우 기본값은 500ms
- * @param {number} [props.maxSize=400] - ripple 효과의 최대 너비입니다. 지정하지 않을 경우 기본값은 400px
- * @param {boolean} [props.disabled=false] - ripple 효과의 활성화/비활성화 여부를 결정. `true`일 경우 ripple 효과가 비활성화. 지정하지 않을 경우 기본값은 `false`(활성화)
- * @param {ReactNode} props.children - `Ripple` 컴포넌트 안에 렌더링될 자식 요소
- *
- * @example
- * <Ripple color="blue" duration={1000} maxSize={500} disabled={false}>
- *   <button>Click Me</button>
- * </Ripple>
  */
 const Ripple = ({
   color = DEFAULT_RIPPLE_OPTION.color,

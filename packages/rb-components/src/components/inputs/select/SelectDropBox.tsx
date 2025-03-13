@@ -61,7 +61,7 @@ interface PropsType {
   handleKeyPress: (e: React.KeyboardEvent) => void;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 const MARGIN = 10;
 

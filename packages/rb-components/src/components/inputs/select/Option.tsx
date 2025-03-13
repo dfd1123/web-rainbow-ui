@@ -30,7 +30,7 @@ interface PropsType {
   handleChange?: (selectData: SelectData) => void;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `SelectBox` 내에서 사용될 `Option` 컴포넌트입니다.

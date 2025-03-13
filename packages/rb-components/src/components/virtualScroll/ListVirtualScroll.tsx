@@ -74,7 +74,7 @@ interface Props<LIST extends UnknownArrayType> {
   }) => ReactElement;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 const VirtualItem = memo(
   ({
@@ -164,19 +164,6 @@ VirtualItem.displayName = "VirtualItem";
 /**
  * 가상 스크롤을 통해 대용량 리스트를 효율적으로 렌더링하는 컴포넌트.
  * 리스트의 아이템들을 화면에 보이는 부분만 렌더링하여 성능을 최적화합니다.
- *
- * @param {string} [props.className=''] - 컴포넌트의 최상위 엘리먼트에 적용될 클래스 이름.
- * @param {MutableRefObject<HTMLElement | null> | HTMLElement} [props.scrollTarget] - 스크롤 이벤트의 대상이 될 엘리먼트. 기본값은 window.
- * @param {LIST | null} props.list - 렌더링할 데이터 리스트. null이면 로딩 중이거나 데이터 없음 상태로 간주.
- * @param {number} [props.preloadCnt=10] - 뷰포트에 보이지 않는 영역 위아래로 미리 렌더링할 아이템의 개수.
- * @param {number | ((containerWidth: number) => number)} props.itemHeight - 리스트 아이템의 높이. 고정값 또는 컨테이너 너비에 따라 동적으로 계산 가능.
- * @param {number | ((containerWidth: number) => number)} props.gapY - 리스트 아이템간의 수직 간격. 고정값 또는 컨테이너 너비에 따라 동적으로 계산 가능.
- * @param {string | ReactElement} [props.noDataMsg] - 리스트가 비어있을 때 표시할 메시지 또는 요소.
- * @param {boolean} [props.loading] - 리스트 데이터 로딩 상태 여부.
- * @param {string | ReactElement} [props.loadingElement=<Spinner />] - 로딩 중일 때 표시할 요소 또는 컴포넌트.
- * @param {ReactElement} [props.skeletonElement] - 로딩 시 스켈레톤 처리를 위해 표시할 요소 또는 컴포넌트.
- * @param {number} [props.skeletonCnt=3] - 로딩 시 표시할 스켈레톤 요소의 개수.
- * @param {function} props.element - 리스트의 각 아이템을 렌더링할 때 사용할 함수. 아이템 데이터, 이미지 캐셔 함수, 인덱스를 인자로 받음.
  */
 const ListVirtualScroll = <LIST extends UnknownArrayType>({
   className = "",

@@ -12,7 +12,7 @@ type Props = CheckBoxProps & {
   // type
 };
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 const RoundCheckBox = ({ className = "", ...CheckBoxProps }: Props) => {
   //logic

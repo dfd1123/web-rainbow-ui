@@ -90,7 +90,7 @@ interface PopoverButtonRef {
   open: () => void | Promise<void>;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 const defaultExcludeOutSideIds: string[] = [];
 

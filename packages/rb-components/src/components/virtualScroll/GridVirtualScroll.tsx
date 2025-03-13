@@ -80,7 +80,7 @@ type VirtualItemProps = {
   children?: ReactElement;
 };
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 const VirtualItem = memo(
   ({
@@ -133,22 +133,6 @@ VirtualItem.displayName = "VirtualItem";
 /**
  * GridVirtualScroll 컴포넌트는 가상 스크롤을 이용하여 대량의 데이터를 효율적으로 렌더링하는 그리드 형태의 UI를 제공합니다.
  * 이 컴포넌트는 성능 최적화를 위해 화면에 보이는 부분만 렌더링하며, 사용자가 스크롤할 때 추가적인 데이터를 동적으로 로드합니다.
- *
- * @param {string} [props.className] - 컴포넌트 최상위 엘리먼트에 적용할 CSS 클래스 이름. (optional)
- * @param {MutableRefObject<HTMLElement | null> | HTMLElement} [props.scrollTarget] - 스크롤 이벤트의 대상이 될 엘리먼트. 기본값은 `window`입니다. (optional)
- * @param {LIST | null} props.list - 렌더링할 데이터 리스트. 데이터가 없거나 로딩 중일 경우 `null`을 전달할 수 있습니다.
- * @param {number} [props.preloadRowCnt=2] - 뷰포트 외에 미리 렌더링할 행의 수. 기본값은 2입니다. (optional)
- * @param {number | ((containerWidth: number) => number)} props.itemWidth - 각 항목의 너비. 고정값 또는 컨테이너 너비에 따라 동적으로 계산할 수 있는 함수를 전달할 수 있습니다.
- * @param {number | ((containerWidth: number) => number)} props.itemHeight - 각 항목의 높이. 고정값 또는 컨테이너 너비에 따라 동적으로 계산할 수 있는 함수를 전달할 수 있습니다.
- * @param {number | ((containerWidth: number) => number)} props.gapX - 리스트 항목 간의 가로 간격. 고정값 또는 컨테이너 너비에 따라 동적으로 계산할 수 있는 함수를 전달할 수 있습니다.
- * @param {number | ((containerWidth: number) => number)} props.gapY - 리스트 항목 간의 세로 간격. 고정값 또는 컨테이너 너비에 따라 동적으로 계산할 수 있는 함수를 전달할 수 있습니다.
- * @param {string | ReactElement} [props.noDataMsg] - 데이터 리스트가 비어 있을 경우 표시할 메시지 또는 엘리먼트. (optional)
- * @param {string | ReactElement} [props.loading] - 로딩 상태 여부. (optional)
- * @param {string | ReactElement} [props.loadingElement=<Spinner />] - 데이터 리스트가 `null`(로딩 중) 이거나 loading이 true이면 표시할 로딩 인디케이터 엘리먼트. 기본값은 <Spinner />입니다. (optional)
- * @param {ReactElement} [props.skeletonElement] - 로딩 시 표시할 스켈레톤 엘리먼트. (optional)
- * @param {number} [props.skeletonCnt=3] - 로딩 시 표시할 스켈레톤 엘리먼트의 수. 기본값은 3입니다. (optional)
- * @param {({ item, imageCacher, index }: { item: GetArrayItemType<LIST>; imageCacher: (imgSrcList: string | string[]) => void; index: number }) => ReactElement;} props.element - 리스트의 각 항목을 렌더링할 때 사용할 함수. 렌더링하고자 하는 컴포넌트 또는 JSX 형태를 반환해야 합니다.
- * @param {ForwardedRef<HTMLDivElement>} ref - 컴포넌트에 접근할 수 있는 ref 객체.
  */
 const GridVirtualScroll = <LIST extends UnknownArrayType>({
   list,

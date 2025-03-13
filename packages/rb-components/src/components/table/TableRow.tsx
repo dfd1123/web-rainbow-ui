@@ -41,7 +41,7 @@ type PropsType = {
   onClick?: (e: MouseEvent<HTMLTableRowElement>) => void;
 };
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `TableRow` 컴포넌트는 테이블의 행을 나타내며, 다양한 props를 통해 커스터마이징이 가능

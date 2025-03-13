@@ -39,7 +39,7 @@ interface PropsType {
   close?: () => void;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * Popover 컴포넌트는 특정 UI 요소 위에 떠 있는 컨테이너를 랜더링합니다.

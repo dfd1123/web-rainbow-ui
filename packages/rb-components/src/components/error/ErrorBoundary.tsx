@@ -46,7 +46,7 @@ interface StateType {
   fallback?: ReactNode | ReactElement | string;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * ErrorBoundary 컴포넌트는 자식 컴포넌트 트리에서 발생하는 JavaScript 에러를 캐치하여

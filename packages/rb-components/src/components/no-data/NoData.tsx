@@ -4,7 +4,7 @@ import { makeCxFunc } from "@repo/rb-utils/parserUtils";
 
 import style from "./NoData.module.scss";
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 interface PropsType {
   /**
@@ -13,6 +13,9 @@ interface PropsType {
   nullText?: ReactElement | string;
   style?: CSSProperties;
   className?: string;
+  /**
+   * 데이터가 없을때 노출시킬 아이콘 및 추가 내용
+   */
   children?: ReactElement;
 }
 

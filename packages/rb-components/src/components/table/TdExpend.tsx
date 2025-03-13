@@ -21,7 +21,7 @@ interface PropsType {
   style?: CSSProperties;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `Table` 컴포넌트에서 아코디언 UI를 지원하는 컴포넌트

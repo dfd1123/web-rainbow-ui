@@ -49,10 +49,10 @@ const Portal = ({ children, id = "portal-wrapper" }: PropsType) => {
 
         const wrapperElement = document.createElement("div");
         wrapperElement.setAttribute("id", id);
-        wrapperElement.setAttribute("class", "wemixplay-ui");
+        wrapperElement.setAttribute("class", "rainbow-ui");
         wrapperElement.setAttribute(
           "data-theme",
-          document.getElementById("wemixplay-ui")?.getAttribute("data-theme") ||
+          document.getElementById("rainbow-ui")?.getAttribute("data-theme") ||
             "light",
         );
         document.body.appendChild(wrapperElement);

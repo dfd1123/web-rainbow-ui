@@ -72,26 +72,10 @@ interface PropsType extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `HStack`은 display: flex; 형태의 수평 스택 컴포넌트 입니다.
- *
- * @param {string} [props.className] - 컴포넌트 클래스명
- * @param {string} [props.tag='div' | 'section' | 'article' | 'header' | 'footer' | 'main' | 'aside' | 'nav'] - 컴포넌트 태그
- * @param {CSSProperties['justifyContent']} [props.justifyContent] - flex의 justify-content
- * @param {CSSProperties['justifyItems']} [props.justifyItems] - flex의 justify-items
- * @param {CSSProperties['justifySelf']} [props.justifySelf] - flex의 justify-self
- * @param {CSSProperties['alignItems']} [props.alignItems] - flex의 align-items
- * @param {CSSProperties['alignSelf']} [props.alignSelf] - flex의 align-self
- * @param {CSSProperties['alignContent']} [props.alignContent] - flex의 align-content
- * @param {boolean} [props.inline] - inline-flex 레이아웃 여부
- * @param {CSSProperties} [props.style] - 컴포넌트 스타일
- * @param {CSSProperties['columnGap']} [props.columnGap] - flex의 column-gap
- * @param {CSSProperties['rowGap']} [props.rowGap] - flex의 row-gap
- * @param {CSSProperties['gap']} [props.gap] - flex의 gap
- * @param {ReactNode} [props.children] - 컴포넌트 자식 노드
- * @returns 수평 스택 컴포넌트
  */
 const HStack = ({
   id,

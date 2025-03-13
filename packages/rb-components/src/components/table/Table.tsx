@@ -82,7 +82,7 @@ interface PropsType<T extends TableData[]> {
   children: (obj: ChildrenFuncParamsType<T>) => ReactNode;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * 재귀로 Fragment나 TdColumn 컴포넌트만을 찾아 ReactNode[]로 반환하는 함수

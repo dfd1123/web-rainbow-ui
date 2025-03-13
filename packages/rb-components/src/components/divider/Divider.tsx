@@ -57,24 +57,10 @@ type VerticalProps = BaseProps & {
 
 type Props = HorizontalProps | VerticalProps;
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `Divider`컴포넌트는 구분선을 표시하는 컴포넌트입니다.
- *
- * @param {string} [props.className] - 컴포넌트 클래스명
- * @param {string} [props.type] - 구분선 타입
- * @param {string} [props.variant] - 구분선 버턴 종류
- * @param {string} [props.color] - 구분선 색상
- * @param {number} [props.size] - 구분선 두께
- * @param {number} [props.spaceSize] - 구분선 간격
- * @param {string} [props.spaceDirection] - 구분선 간격 방향
- * @param {string} [props.contentAlign] - 컨텐츠 정렬
- * @param {number} [props.contentSpace] - 컨텐츠 양 옆 간격
- * @param {number} [props.contentPosition] - 컨텐츠 정렬 위치에서 어느 정도 띄울것인지 간격 사이즈
- * @param {ReactNode} [props.children] - 컴포넌트 자식 노드
- * @param {CSSProperties} [props.style] - 컴포넌트 스타일
- * @returns 구분선 컴포넌트
  */
 const Divider = ({
   className,

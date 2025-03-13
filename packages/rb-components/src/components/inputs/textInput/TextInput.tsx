@@ -66,25 +66,11 @@ interface PropsType extends InputHTMLAttributes<HTMLInputElement> {
   ) => void;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
 /**
  * `TextInput` 컴포넌트는 다양한 유형의 입력 필드를 생성하기 위한 컴포넌트입니다.
  * 이 컴포넌트는 사용자 입력을 받고, 이를 검증하며, 입력 값이 변경될 때마다 지정된 함수를 호출할 수 있습니다.
- *
- * @param {Object} [props.ref] - input 태그의 Element를 가리킬 ref 값
- * @param {string} [props.className] - 입력 필드에 적용될 추가적인 CSS 클래스 이름
- * @param {'email'|'number'|'password'|'search'|'tel'|'text'|'url'} props.type - 입력 필드의 타입
- * @param {string|number} [props.value] - 입력 필드의 현재 값
- * @param {boolean} [props.error] - 입력 필드에 에러 상태 표시 여부
- * @param {boolean} [props.info] - 입력 칠드에 가이드 안내 상태 표시 여부
- * @param {boolean} [props.hideBtnReset] - 리셋 버튼 숨김 처리 여부
- * @param {ReactElement} [props.searchIcon=<SvgIcoSearchDefault />] - 검색 아이콘으로 사용될 ReactElement. 기본값은 `<SvgIcoSearchDefault />`
- * @param {ReactElement} [props.resetIcon=<SvgIcoInputReset/>] - 리셋 아이콘으로 사용될 ReactElement. 기본값은 `<SvgIcoInputReset/>`
- * @param {RegExp | ((value: string) => string) | ((value: number) => number)} [props.validate] - 입력 값 검증을 위한 정규 표현식 또는 함수
- * @param {(value: AllowAny, name?: string) => void} [props.handleChange] - 값이 변경될 때 호출될 함수
- * @param {(value: AllowAny, name?: string) => void} [props.handleEnter] - 엔터 키가 눌렸을 때 호출될 함수
- * @param {(value: AllowAny, name?: string, clickResetBtn?: boolean) => void} [props.handleReset] - 리셋 버튼이 클릭됐을 때 호출될 함수
  */
 const TextInput = forwardRef<HTMLInputElement, PropsType>((props, ref) => {
   const {

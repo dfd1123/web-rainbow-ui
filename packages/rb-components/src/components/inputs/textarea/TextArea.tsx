@@ -23,8 +23,11 @@ interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   handleChange?: (value: string, name?: string) => void;
 }
 
-const cx = makeCxFunc(style);
+const cx = makeCxFunc(style, 'rb-ui');
 
+/**
+ * 텍스트 입력 필드 컴포넌트
+ */
 const TextArea = forwardRef<HTMLTextAreaElement, Props>(
   (
     { className = "", maxLength, error, handleChange, ...textareaProps },
